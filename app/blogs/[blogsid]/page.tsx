@@ -38,16 +38,12 @@ export default async function Articles({ params }: PageProps) {
     const blog = BlogsData.find((blog) => blog.id === blogIndex)
     
     return (
-        <div className="min-h-screen mr-125 ml-125">
-            
+        <div className="lg:mr-125 lg:ml-125 mr-5 ml-5">
             <h1 className="text-white text-center text-6xl p-5 font-bold text-shadow-lg text-shadow-green-800 font-mono ">{blog?.title}</h1>
             <div className="flex gap-4 justify-center">
             <h1 className="text-sm text-center p-5 font-mono">[{blog?.date}]</h1>
             <h1 className="text-sm text-center p-5 font-mono">[{blog?.time}]</h1>
-
-
             </div>
-
             <hr className="border-dashed border-4 text-green-400"/>
             <p className="font-mono p-5 tracking-wide leading-loose">{blog?.content}</p>
         </div>
